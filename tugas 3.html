@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Kalkulator</title>
+</head>
+<body>
+    <h1>Kalkulator</h1>
+
+    <table>
+        <tr>
+            <td><label>Angka 1</label></td>
+            <td><input type="number" name="Angka1" id="Angka1" placeholder="Input Angka 1"></td>
+        </tr>
+
+        <tr>
+            <td><label>Angka 2</label></td>
+            <td><input type="number" name="Angka2" id="Angka2" placeholder="Input Angka 2"></td>
+        </tr>
+
+        <tr>
+            <td>
+                <button onclick="hitung('+')">+</button>
+                <button onclick="hitung('-')">-</button>
+                <button onclick="hitung('x')">x</button>
+                <button onclick="hitung('/')">/</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label>Hasil</label></td>
+            <td><input type="text" id="Hasil"></td>
+        </tr>
+    </table>
+
+    <script>
+        function hitung (operasi)
+        {
+            var A1 = parseFloat(document.getElementById('Angka1').value);
+            var A2 = parseFloat(document.getElementById('Angka2').value);
+            var Hasil = parseFloat(document.getElementById('Hasil').value);
+
+            switch (operasi)
+            {
+                case '+':
+                    Hasil = A1 + A2;
+                    document.getElementById('Hasil').value = Hasil;
+                    break;
+                case '-':
+                    Hasil = A1 - A2;
+                    document.getElementById('Hasil').value = Hasil;
+                    break;
+                case 'x':
+                    Hasil = A1 * A2;
+                    document.getElementById('Hasil').value = Hasil;
+                    break;
+                case '/':
+                    Hasil = A1 / A2;
+                    document.getElementById('Hasil').value = Hasil;
+                    break;
+            }
+        
+        return 0;
+
+        }
+    </script>
+</body>
+</html>

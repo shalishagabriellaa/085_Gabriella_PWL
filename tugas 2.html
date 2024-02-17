@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Form</title>
+    <link rel="stylesheet" id="text/css" href="style.css">
+</head>
+<style>
+    body, html {height: 100%;
+                margin: 0;}
+    .bg-image {background-image: url("https://sman1sungailala.sch.id/media_library/posts/large/a7f0a0698790b41dc47973cd39e5ef44.png");
+               filter: blur(6px);
+               -webkit-filter: blur(6px);
+               height: 100%; 
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;}
+    .bg-text {background-color: rgb(146, 142, 142); 
+              background-color: rgba(128, 123, 123, 0.4); 
+              color: rgb(2, 2, 84);
+              border: 3px solid #f1f1f1;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 2;
+              width: 80%;
+              padding: 20px;}
+    p {font-size: 20px;}
+    b {font-size: 20px;
+       font-family: monospace;}
+</style>
+<body>
+    <div class="bg-image"></div>
+    <div class="bg-text">
+    <form action="register.php" method="post">
+        <h1 align="center">Form Pendaftaran Bimbingan Belajar</h1>
+        <h2 align="center">BUTEN 2.0</h2>
+
+        <fieldset>
+            <legend><b>Akun Email</b></legend>
+                    <table>
+                          <tr>
+                             <td><label for="email">Email</label></td>
+                             <td>:</td>
+                             <td><input type="email" name="email_pengguna" id="email_pengguna" placeholder="Input Email Here" required></td>
+                          </tr>  
+                          <tr>
+                            <td><label for="password">Password</label></td>
+                            <td>:</td>
+                            <td><input type="password" name="password_pengguna" id="password_pengguna" required></td>
+                          </tr>
+                    </table>
+        </fieldset>
+        
+        <fieldset>
+            <legend><b>Data Diri</b></legend>
+                    <table>
+                          <tr>
+                             <td>
+                                <label for="tempat_lahir">Tempat/</label>
+                                <label for="tanggal_lahir">Tanggal Lahir</label>
+                            </td>
+                             <td>:</td>
+                             <td>
+                                <input type="text" name="tempat_lahir" id="tempat_lahir">
+                                <input type="date" name="tanggal_lahir" id="tanggal_lahir">
+                            </td>
+                          </tr>
+                          <tr>
+                             <td><label for="kelas">Kelas</label></td>
+                             <td>:</td>
+                             <td>
+                                <select name="kelas" id="kelas">
+                                <option value="Kelas X IPA">X IPA</option>
+                                <option value="Kelas X IPS">X IPS</option>
+                                <option value="Kelas XI IPA">XI IPA</option>
+                                <option value="Kelas XI IPS">XI IPS</option>
+                                <option value="Kelas XII IPA">XII IPA</option>
+                                <option value="Kelas XII IPS">XII IPS</option>
+                                </select>
+                             </td>
+                          </tr>
+                          <tr>
+                             <td><label for="no.hp/wa">No. WA/HP</label></td>
+                             <td>:</td>
+                             <td><input type="text" name="no.hp/wa" id="no.hp/wa"></td>
+                          </tr>
+                          <tr>
+                             <td><label for="alamat">Alamat</label></td>
+                             <td>:</td>
+                             <td><textarea name="alamat" id="alamat" cols="15" rows="5"></textarea></td>
+                          </tr>
+                          <tr>
+                             <td><label for="jenis_kelamin">Jenis Kelamin</label></td>
+                             <td>:</td>
+                             <td>
+                                <input type="radio" name="gender" id="lk">
+                                <label for="laki-laki">Laki-laki</label>
+                                <input type="radio" name="gender" id="pr">
+                                <label for="perempuan">Perempuan</label>
+                            </td>
+                          </tr>
+                    </table>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>Data Orang Tua</b></legend>
+            <table>
+                  <tr>
+                     <td><label for="nama_orangtua">Nama Ayah/Ibu</label></td>
+                     <td>:</td>
+                     <td><input type="text" name="nama_orangtua" id="nama_orangtua"></td>
+                  </tr>
+                  <tr>
+                      <td><label for="pekerjaan">Pekerjaan</label></td>
+                      <td>:</td>
+                      <td><input type="text" name="pekerjaan" id="pekerjaan"></td>
+                  </tr>
+                  <tr>
+                     <td><label for="no_orangtua">No. HP/WA</label></td>
+                     <td>:</td>
+                     <td><input type="text" name="no_orangtua" id="no_orangtua"></td>
+                  </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend><label for="program"><b>Program Bimbingan Yang Diambil</b></label></legend>
+            <select name="program" id="program">
+                <option value="reguler">Reguler &#40;2x seminggu&#41;</option>
+                <option value="premium">Premium &#40;3x seminggu&#41;</option>
+                <option value="garansi">Garansi &#40;Uang kembali 40% jika tidak 10 besar di kelas&#41;</option>
+            </select>
+        </fieldset>
+
+        <p align="center">
+            <button class="button1">Daftar</button>
+            <button class="button2">Hapus Form</button>
+        </p>
+
+        <p align="center">
+            Jika mengalami kendala selama proses pendaftaran, harap hubungi helpdesk kami melalui <b>Email : butenselamanya@gmail.com</b>
+            ataupun melalui <b>No. Telepon : 08123456789</b>
+        </p> 
+    </form>
+    </div>
+</body>
+</html>
